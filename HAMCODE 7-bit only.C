@@ -57,6 +57,7 @@ if(code[d-7]==1)
   {
     code[d-7]=1;
   }
+  printf("The corrected code is \n");
 i=0;
 for(i=0;i<7;i++){
 printf(" %d ",code[i]);
