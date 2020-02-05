@@ -21,7 +21,6 @@ for(i=1;i<8;i++)
    c1++;
   }
 }
-printf("\n%d",c1);
 p1=parity(c1);
 
 i=0;
@@ -31,7 +30,6 @@ for(i=1;i<8;i++)
    c2++;
   }
 }
-printf("\n%d",c2);
 p2=parity(c2);
 
 
@@ -42,28 +40,28 @@ for(i=1;i<8;i++)
    c3++;
   }
 }
-printf("\n%d",c3);
+  
 p3=parity(c3);
 
 d=(p1*1)+(p2*2)+(p3*4);
 
 printf("\nError at position %d\n",d);
 
-if(code[d-7]==1)
+if(code[7-d]==1)
 {
-  code[d-7]=0;
+  code[7-d]=0;
 }
   else
   {
-    code[d-7]=1;
+    code[7-d]=1;
   }
   printf("The corrected code is \n");
 i=0;
-for(i=0;i<7;i++){
+for(i=0;i<7;i++)
+{
 printf(" %d ",code[i]);
 }
 getch();
-
 }
 
 int parity(x){
